@@ -168,6 +168,7 @@ namespace FoodBang.Forms.Admin
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAgregarU";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Usuario";
             this.Load += new System.EventHandler(this.FrmAgregarU_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_edad)).EndInit();

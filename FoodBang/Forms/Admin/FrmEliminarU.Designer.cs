@@ -120,6 +120,7 @@ namespace FoodBang.Forms.Admin
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmEliminarU";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar Usuario";
             ((System.ComponentModel.ISupportInitialize)(this.dgUser)).EndInit();
             this.ResumeLayout(false);
