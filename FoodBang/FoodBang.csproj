@@ -70,17 +70,35 @@
     <Compile Include="Entidades\Pedido.cs" />
     <Compile Include="Entidades\Restaurante.cs" />
     <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Forms\Admin\FrmAgregarC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmAgregarC.Designer.cs">
+      <DependentUpon>FrmAgregarC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin\FrmAgregarU.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Admin\FrmAgregarU.Designer.cs">
       <DependentUpon>FrmAgregarU.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Admin\FrmConsultarC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmConsultarC.Designer.cs">
+      <DependentUpon>FrmConsultarC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin\FrmConsultarU.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Admin\FrmConsultarU.Designer.cs">
       <DependentUpon>FrmConsultarU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmEliminarC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmEliminarC.Designer.cs">
+      <DependentUpon>FrmEliminarC.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\FrmEliminarU.cs">
       <SubType>Form</SubType>
@@ -102,11 +120,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Admin\FrmAgregarC.resx">
+      <DependentUpon>FrmAgregarC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\FrmAgregarU.resx">
       <DependentUpon>FrmAgregarU.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\FrmConsultarC.resx">
+      <DependentUpon>FrmConsultarC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\FrmConsultarU.resx">
       <DependentUpon>FrmConsultarU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\FrmEliminarC.resx">
+      <DependentUpon>FrmEliminarC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\FrmEliminarU.resx">
       <DependentUpon>FrmEliminarU.cs</DependentUpon>
@@ -141,6 +168,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Forms\User\" />
     <Folder Include="Imagenes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

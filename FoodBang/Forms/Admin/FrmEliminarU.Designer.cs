@@ -117,6 +117,7 @@ namespace FoodBang.Forms.Admin
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmEliminarU";
             this.Text = "Eliminar Usuario";

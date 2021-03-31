@@ -32,13 +32,13 @@ namespace FoodBang.Forms.Admin
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAdmin));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestionarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionarRestaurantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionarComidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionarRestaurantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarRestauranteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarMenusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionarComidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarComidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarComidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarComidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,6 +68,27 @@ namespace FoodBang.Forms.Admin
             this.gestionarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(133, 20);
             this.gestionarUsuariosToolStripMenuItem.Text = "Gestionar Usuarios";
             // 
+            // agregarUsuarioToolStripMenuItem
+            // 
+            this.agregarUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("agregarUsuarioToolStripMenuItem.Image")));
+            this.agregarUsuarioToolStripMenuItem.Name = "agregarUsuarioToolStripMenuItem";
+            this.agregarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.agregarUsuarioToolStripMenuItem.Text = "Agregar Usuario";
+            // 
+            // consultarUsuarioToolStripMenuItem
+            // 
+            this.consultarUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultarUsuarioToolStripMenuItem.Image")));
+            this.consultarUsuarioToolStripMenuItem.Name = "consultarUsuarioToolStripMenuItem";
+            this.consultarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.consultarUsuarioToolStripMenuItem.Text = "Consultar Usuario";
+            // 
+            // eliminarUsuarioToolStripMenuItem
+            // 
+            this.eliminarUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eliminarUsuarioToolStripMenuItem.Image")));
+            this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
+            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar Usuario";
+            // 
             // gestionarRestaurantesToolStripMenuItem
             // 
             this.gestionarRestaurantesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -77,38 +98,6 @@ namespace FoodBang.Forms.Admin
             this.gestionarRestaurantesToolStripMenuItem.Name = "gestionarRestaurantesToolStripMenuItem";
             this.gestionarRestaurantesToolStripMenuItem.Size = new System.Drawing.Size(155, 20);
             this.gestionarRestaurantesToolStripMenuItem.Text = "Gestionar Restaurantes";
-            // 
-            // gestionarComidasToolStripMenuItem
-            // 
-            this.gestionarComidasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarComidaToolStripMenuItem,
-            this.consultarComidaToolStripMenuItem,
-            this.eliminarComidaToolStripMenuItem});
-            this.gestionarComidasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gestionarComidasToolStripMenuItem.Image")));
-            this.gestionarComidasToolStripMenuItem.Name = "gestionarComidasToolStripMenuItem";
-            this.gestionarComidasToolStripMenuItem.Size = new System.Drawing.Size(135, 20);
-            this.gestionarComidasToolStripMenuItem.Text = "Gestionar Comidas";
-            // 
-            // agregarUsuarioToolStripMenuItem
-            // 
-            this.agregarUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("agregarUsuarioToolStripMenuItem.Image")));
-            this.agregarUsuarioToolStripMenuItem.Name = "agregarUsuarioToolStripMenuItem";
-            this.agregarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.agregarUsuarioToolStripMenuItem.Text = "Agregar Usuario";
-            // 
-            // consultarUsuarioToolStripMenuItem
-            // 
-            this.consultarUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultarUsuarioToolStripMenuItem.Image")));
-            this.consultarUsuarioToolStripMenuItem.Name = "consultarUsuarioToolStripMenuItem";
-            this.consultarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultarUsuarioToolStripMenuItem.Text = "Consultar Usuario";
-            // 
-            // eliminarUsuarioToolStripMenuItem
-            // 
-            this.eliminarUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eliminarUsuarioToolStripMenuItem.Image")));
-            this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
-            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar Usuario";
             // 
             // agregarRestauranteToolStripMenuItem
             // 
@@ -123,6 +112,17 @@ namespace FoodBang.Forms.Admin
             this.gestionarMenusToolStripMenuItem.Name = "gestionarMenusToolStripMenuItem";
             this.gestionarMenusToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.gestionarMenusToolStripMenuItem.Text = "Gestionar Menus";
+            // 
+            // gestionarComidasToolStripMenuItem
+            // 
+            this.gestionarComidasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarComidaToolStripMenuItem,
+            this.consultarComidaToolStripMenuItem,
+            this.eliminarComidaToolStripMenuItem});
+            this.gestionarComidasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gestionarComidasToolStripMenuItem.Image")));
+            this.gestionarComidasToolStripMenuItem.Name = "gestionarComidasToolStripMenuItem";
+            this.gestionarComidasToolStripMenuItem.Size = new System.Drawing.Size(135, 20);
+            this.gestionarComidasToolStripMenuItem.Text = "Gestionar Comidas";
             // 
             // agregarComidaToolStripMenuItem
             // 
@@ -151,6 +151,7 @@ namespace FoodBang.Forms.Admin
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 287);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuAdmin";

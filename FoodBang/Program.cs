@@ -17,7 +17,7 @@ namespace FoodBang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmEliminarU());
+            Application.Run(new FrmAgregarU());
         }
     }
 }

@@ -18,9 +18,8 @@ namespace FoodBang
            Reportes,
            Depositos,
            Consultas;
-        // DataTable a = new DataTable();
-        //Conexión a base de datos Postgresql
-        //Retorna el acceso a la Base de tados
+   
+        //Retorna la conexión a la base de datos (se debe usar en todas las operaciones)
         public static NpgsqlConnection Conexion()
         {
             NpgsqlConnection conecta = new NpgsqlConnection("Server = localhost; User Id= postgres; Password = homero420; Database = FoodBang;");
@@ -28,37 +27,11 @@ namespace FoodBang
 
         }
 
-        //Ejemplo select
-        public static DataTable Consultar()
-        {
-            //string query = "select * from \"Comida\"";
-            //string query = "select b.nombre,c.nombre from comida as b , categoria_comida as c where c.id = 1";
-            NpgsqlConnection conn = Conexion();
-            string query = "select distinct * from usuario where passw = '1234'";
-            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
-            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
-            DataTable tabla = new DataTable();
-            datos.Fill(tabla);
-
-
-            IEnumerable<DataRow> dat = tabla.AsEnumerable();
-
-            foreach (var row in dat)
-            {
-                if (row.ToString() == "tipo")
-                {
-                    MessageBox.Show("Nepe");
-                }
-            }
-
-            return tabla;
-        }
-
         public static DataTable ConsultarUsuario(String user)
         {
 
             NpgsqlConnection conn = Conexion();
-            string query = "select  * from usuario where \"user\" = '"+user+"'";
+            string query = "select  * from usuario where usuario = '" + user+"'";
             NpgsqlCommand conector = new NpgsqlCommand(query, conn);
             NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
             DataTable tabla = new DataTable();
@@ -70,7 +43,7 @@ namespace FoodBang
         {
 
             NpgsqlConnection conn = Conexion();
-            string query = "select distinct * from usuario where \"user\" = '" + user + "' and passw = '" + password + "';";
+            string query = "select distinct * from usuario where usuario = '" + user + "' and passw = '" + password + "';";
 
             NpgsqlCommand conector = new NpgsqlCommand(query, conn);
             NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
@@ -84,36 +57,31 @@ namespace FoodBang
             //}
 
         }
-        //Ejemplo Insert
-        public static void Insert()
-        {
-            String nombre = "Banano";
-            int catego = 4;
-            //este query no sirve porque ya inserté ese dato
-            //string query = "INSERT INTO \"Comida\" (nombre, categoria) VALUES('"+ nombre +"'," + catego +");";
-            //Se abre la conexion
-            // conx.Open();
-            //Se insertan los datos mediante un query
-            //La sintaxis de in insert postgres es INSERT INTO tabla(valor1, valor2) VALUES(1, 2);
-            //NpgsqlCommand cmd = new NpgsqlCommand(query,conx);
-            //Se ejecuta el query
-            // cmd.ExecuteNonQuery();
-            MessageBox.Show("Insertado");
-            //conx.Close();
 
-        }
         public static void EliminarUser(string user)
         {
             NpgsqlConnection conx = Conexion();
-            //este query no sirve porque ya inserté ese dato
-            string query = "DELETE FROM \"usuario\" WHERE \"user\"  = '" + user + "'";
+            string query = "DELETE FROM \"usuario\" WHERE usuario  = '" + user + "'";
             // Se abre la conexion
             conx.Open();
-           // Se insertan los datos mediante un query
-           // La sintaxis de in insert postgres es INSERT INTO tabla(valor1, valor2) VALUES(1, 2);
             NpgsqlCommand cmd = new NpgsqlCommand(query, conx);
-           // Se ejecuta el query
              cmd.ExecuteNonQuery();
+            MessageBox.Show("Usuario Eliminado");
+            conx.Close();
+
+        }
+
+        public static void insertarUser(string nombre, string edad, string tipo, string user, string passw)
+        {
+            NpgsqlConnection conx = Conexion();
+            // La sintaxis de in insert postgres es INSERT INTO tabla(valor1, valor2) VALUES(1, 2);
+            string query = "INSERT INTO \"usuario\" (nombre, edad, tipo, usuario, passw) VALUES ('" + nombre + "', " + edad + ", '" + tipo + "', '" + user + "', '" + passw + "');"; 
+            // Se abre la conexion
+            conx.Open();
+            // Se insertan los datos mediante el query            
+            NpgsqlCommand cmd = new NpgsqlCommand(query, conx);
+            // Se ejecuta el query
+            cmd.ExecuteNonQuery();
             MessageBox.Show("Insertado");
             conx.Close();
 

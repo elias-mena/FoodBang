@@ -21,5 +21,23 @@ namespace FoodBang.Forms.Admin
         {
 
         }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            string nombre = txt_nombre.Text;
+            string edad = txt_edad.Text;
+            string user = txt_usuario.Text;
+            string passw = txt_passw.Text;
+            string tipo = cbx_tipo.Text;
+            if(tipo == "Administrador")
+            {
+                tipo = "A";
+            }
+            else
+            {
+                tipo = "U";
+            }
+            Engine.insertarUser(nombre, edad, tipo, user, passw);
+        }
     }
 }

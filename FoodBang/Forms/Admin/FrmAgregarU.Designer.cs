@@ -99,9 +99,19 @@ namespace FoodBang.Forms.Admin
             // txt_edad
             // 
             this.txt_edad.Location = new System.Drawing.Point(70, 74);
+            this.txt_edad.Minimum = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
             this.txt_edad.Name = "txt_edad";
             this.txt_edad.Size = new System.Drawing.Size(131, 20);
             this.txt_edad.TabIndex = 6;
+            this.txt_edad.Value = new decimal(new int[] {
+            18,
+            0,
+            0,
+            0});
             // 
             // btn_agregar
             // 
@@ -111,6 +121,7 @@ namespace FoodBang.Forms.Admin
             this.btn_agregar.TabIndex = 7;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // cbx_tipo
             // 
@@ -134,6 +145,7 @@ namespace FoodBang.Forms.Admin
             // 
             this.txt_passw.Location = new System.Drawing.Point(70, 140);
             this.txt_passw.Name = "txt_passw";
+            this.txt_passw.PasswordChar = '*';
             this.txt_passw.Size = new System.Drawing.Size(131, 20);
             this.txt_passw.TabIndex = 10;
             // 
@@ -141,7 +153,7 @@ namespace FoodBang.Forms.Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(280, 288);
+            this.ClientSize = new System.Drawing.Size(246, 287);
             this.Controls.Add(this.txt_passw);
             this.Controls.Add(this.txt_usuario);
             this.Controls.Add(this.cbx_tipo);
@@ -153,6 +165,7 @@ namespace FoodBang.Forms.Admin
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_agregar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAgregarU";
             this.Text = "Agregar Usuario";
