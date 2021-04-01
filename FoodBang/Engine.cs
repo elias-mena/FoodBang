@@ -12,12 +12,6 @@ namespace FoodBang
     class Engine
     {
 
-        public static bool AccesoAutorizado,
-           Salir,
-           Retiros,
-           Reportes,
-           Depositos,
-           Consultas;
    
         //Retorna la conexión a la base de datos (se debe usar en todas las operaciones)
         public static NpgsqlConnection Conexion()
@@ -26,36 +20,17 @@ namespace FoodBang
             return conecta;
 
         }
-
+        //Gestionar Usuarios 
         public static DataTable ConsultarUsuario(String user)
         {
 
             NpgsqlConnection conn = Conexion();
-            string query = "select  * from usuario where usuario = '" + user+"'";
+            string query = "SELECT nombre, edad, tipo, usuario FROM usuario WHERE usuario = '" + user+"';";
             NpgsqlCommand conector = new NpgsqlCommand(query, conn);
             NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
             DataTable tabla = new DataTable();
             datos.Fill(tabla);
             return tabla;
-        }
-
-        public static Boolean ConsultarClave(String user, String password)
-        {
-
-            NpgsqlConnection conn = Conexion();
-            string query = "select distinct * from usuario where usuario = '" + user + "' and passw = '" + password + "';";
-
-            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
-            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
-            DataTable tabla = new DataTable();
-            datos.Fill(tabla);
-            return true;
-
-            //if (tabla.Rows.Count > 1)
-            //{
-            //    MessageBox.Show("Hola");
-            //}
-
         }
 
         public static void EliminarUser(string user)
@@ -71,7 +46,7 @@ namespace FoodBang
 
         }
 
-        public static void insertarUser(string nombre, string edad, string tipo, string user, string passw)
+        public static void InsertarUser(string nombre, string edad, string tipo, string user, string passw)
         {
             NpgsqlConnection conx = Conexion();
             // La sintaxis de in insert postgres es INSERT INTO tabla(valor1, valor2) VALUES(1, 2);
@@ -86,5 +61,36 @@ namespace FoodBang
             conx.Close();
 
         }
+
+        //Gestionar Comidas
+        public static DataTable ConsultarComidas()
+        {
+
+            NpgsqlConnection conn = Conexion();
+            string query = "select a.nombre,b.nombre from comida as a , categoria_comida as b where b.id = 1; ";
+            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
+            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
+            DataTable tabla = new DataTable();
+            datos.Fill(tabla);
+            return tabla;
+        }
+        public static Boolean ConsultarClave(String user, String password)
+    {
+
+        NpgsqlConnection conn = Conexion();
+        string query = "select distinct * from usuario where usuario = '" + user + "' and passw = '" + password + "';";
+
+        NpgsqlCommand conector = new NpgsqlCommand(query, conn);
+        NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
+        DataTable tabla = new DataTable();
+        datos.Fill(tabla);
+        return true;
+
+        //if (tabla.Rows.Count > 1)
+        //{
+        //    MessageBox.Show("Hola");
+        //}
+    }
+
     }
 }

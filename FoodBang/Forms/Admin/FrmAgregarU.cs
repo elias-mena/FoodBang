@@ -37,7 +37,7 @@ namespace FoodBang.Forms.Admin
             {
                 tipo = "U";
             }
-            Engine.insertarUser(nombre, edad, tipo, user, passw);
+            Engine.InsertarUser(nombre, edad, tipo, user, passw);
         }
     }
 }

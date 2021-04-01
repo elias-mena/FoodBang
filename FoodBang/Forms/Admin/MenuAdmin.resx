@@ -121,7 +121,7 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="agregarUsuarioToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AgregarUsuarioToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAj2FJREFUeF7t
         vQmYXedZ53kt25JsSdZmW7Yk25IsS7YlazXhoZtpDCQwNKRpmLi7ZxrSkJVuetpMD52wU8Eq7YtVWksq
@@ -738,7 +738,7 @@
         VPduuufc3p+V/+6d95575n9ZUN3zPSr2u+Tbyh+m53AafSqV/x82kXv+xk3nTgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="consultarUsuarioToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ConsultarUsuarioToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAW7lJREFUeF7t
         nQmYHFW5v0lYRBaVxS0iJlNVM4ldVZP8R4kzVTV2ZjpBlIjbuLKIIl5xQdzQq2hwQVxQEa8XFQVRL4oL
@@ -1135,7 +1135,7 @@
         p+vOMRc+k4tVkIMO+v+qI95ZzwSzcQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="eliminarUsuarioToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="EliminarUsuarioToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAW4AAAIACAYAAACitIY4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAz
         ugAAM7oB8LiEgwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABBwSURBVHhe7d1f
@@ -1212,7 +1212,7 @@
         zSWnpHpEGwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="gestionarUsuariosToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="GestionarUsuariosToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAPRdSURBVHhe7P0F
@@ -2261,7 +2261,7 @@
         iq7oiq7oiq7oiq7oiq7oiq7oiq7o+k3Xaaf9NybsRM0u9CtiAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="agregarRestauranteToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AgregarRestauranteToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAj2FJREFUeF7t
         vQmYXedZ53kt25JsSdZmW7Yk25IsS7YlazXhoZtpDCQwNKRpmLi7ZxrSkJVuetpMD52wU8Eq7YtVWksq
@@ -2878,7 +2878,7 @@
         VPduuufc3p+V/+6d95575n9ZUN3zPSr2u+Tbyh+m53AafSqV/x82kXv+xk3nTgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="gestionarMenusToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="GestionarMenusToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAr5JJREFUeF7tnQeYFEXXhYecc845J3NWEAwIgiggkjMooIAECaKICigmBCWjICii
@@ -3633,7 +3633,7 @@
         C7RAC7RAC7RAC7RAC7QbaB7P/wFDK2yqYRcmzgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="gestionarRestaurantesToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="GestionarRestaurantesToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAVthJREFUeF7t
         vQe4FFW67j/3nhv+93/vOfccglkxjKPOzHGMM5IxYQADmAYTbHLOQUERUAQEUbIoUUSSmEVMmAERFUUw
@@ -4009,7 +4009,7 @@
         CCGEEEIIIYQQQgghhBBCCCGEkJ/4xS/+H/xy/KkcMV/vAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="agregarComidaToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AgregarComidaToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAj2FJREFUeF7t
         vQmYXedZ53kt25JsSdZmW7Yk25IsS7YlazXhoZtpDCQwNKRpmLi7ZxrSkJVuetpMD52wU8Eq7YtVWksq
@@ -4626,7 +4626,7 @@
         VPduuufc3p+V/+6d95575n9ZUN3zPSr2u+Tbyh+m53AafSqV/x82kXv+xk3nTgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="consultarComidaToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ConsultarComidaToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAW7lJREFUeF7t
         nQmYHFW5v0lYRBaVxS0iJlNVM4ldVZP8R4kzVTV2ZjpBlIjbuLKIIl5xQdzQq2hwQVxQEa8XFQVRL4oL
@@ -5023,7 +5023,7 @@
         p+vOMRc+k4tVkIMO+v+qI95ZzwSzcQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="eliminarComidaToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="EliminarComidaToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAW4AAAIACAYAAACitIY4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAz
         ugAAM7oB8LiEgwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABBwSURBVHhe7d1f
@@ -5100,7 +5100,7 @@
         zSWnpHpEGwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="gestionarComidasToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="GestionarComidasToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAABdMElE

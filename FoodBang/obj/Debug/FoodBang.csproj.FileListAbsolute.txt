@@ -26,3 +26,7 @@ C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Form
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.Admin.MenuAdmin.resources
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.csproj.CopyComplete
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.Admin.FrmEliminarU.resources
+C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.Admin.FrmAgregarC.resources
+C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.Admin.FrmAgregarR.resources
+C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.Admin.FrmConsultarC.resources
+C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.Admin.FrmEliminarC.resources

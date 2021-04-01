@@ -66,9 +66,9 @@ namespace FoodBang.Forms.Admin
             // dgUser
             // 
             this.dgUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgUser.Location = new System.Drawing.Point(15, 152);
+            this.dgUser.Location = new System.Drawing.Point(12, 152);
             this.dgUser.Name = "dgUser";
-            this.dgUser.Size = new System.Drawing.Size(464, 73);
+            this.dgUser.Size = new System.Drawing.Size(443, 69);
             this.dgUser.TabIndex = 3;
             // 
             // btn_consultar
@@ -85,7 +85,7 @@ namespace FoodBang.Forms.Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 366);
+            this.ClientSize = new System.Drawing.Size(467, 261);
             this.Controls.Add(this.btn_consultar);
             this.Controls.Add(this.dgUser);
             this.Controls.Add(this.txtUser);
