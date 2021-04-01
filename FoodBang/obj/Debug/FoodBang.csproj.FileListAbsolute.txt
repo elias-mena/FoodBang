@@ -30,3 +30,4 @@ C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Form
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.Admin.FrmAgregarR.resources
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.Admin.FrmConsultarC.resources
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.Admin.FrmEliminarC.resources
+C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.Admin.AllUsers.resources

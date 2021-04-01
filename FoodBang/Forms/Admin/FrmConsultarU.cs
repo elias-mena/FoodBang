@@ -21,5 +21,11 @@ namespace FoodBang.Forms.Admin
         {
             dgUser.DataSource = Engine.ConsultarUsuario(txtUser.Text);
         }
+
+        private void BtnAll_Click(object sender, EventArgs e)
+        {
+            AllUsers f = new AllUsers();
+            f.ShowDialog();
+        }
     }
 }

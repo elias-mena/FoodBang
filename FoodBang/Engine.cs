@@ -32,6 +32,17 @@ namespace FoodBang
             datos.Fill(tabla);
             return tabla;
         }
+        public static DataTable ConsultarUsuarios()
+        {
+
+            NpgsqlConnection conn = Conexion();
+            string query = "SELECT nombre, edad, tipo, usuario FROM usuario;";
+            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
+            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
+            DataTable tabla = new DataTable();
+            datos.Fill(tabla);
+            return tabla;
+        }
 
         public static void EliminarUser(string user)
         {
@@ -49,8 +60,8 @@ namespace FoodBang
         public static void InsertarUser(string nombre, string edad, string tipo, string user, string passw)
         {
             NpgsqlConnection conx = Conexion();
-            // La sintaxis de in insert postgres es INSERT INTO tabla(valor1, valor2) VALUES(1, 2);
-            string query = "INSERT INTO \"usuario\" (nombre, edad, tipo, usuario, passw) VALUES ('" + nombre + "', " + edad + ", '" + tipo + "', '" + user + "', '" + passw + "');"; 
+            // La sintaxis de in insert postgres es INSERT INTO tabla(valor1, valor2) VALUES(1, 2); 
+            string query = "INSERT INTO usuario (nombre, edad, tipo, usuario, passw) VALUES ('" + nombre + "', " + edad + ", '" + tipo + "', '" + user + "', '" + passw + "');"; 
             // Se abre la conexion
             conx.Open();
             // Se insertan los datos mediante el query            

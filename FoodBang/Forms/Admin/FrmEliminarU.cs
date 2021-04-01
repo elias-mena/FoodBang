@@ -36,7 +36,6 @@ namespace FoodBang.Forms.Admin
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             Engine.EliminarUser(txtUser.Text);
-            MessageBox.Show("Usuario Eliminado");
         }
     }
 }

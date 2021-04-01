@@ -35,6 +35,7 @@ namespace FoodBang.Forms.Admin
             this.txtUser = new System.Windows.Forms.TextBox();
             this.dgUser = new System.Windows.Forms.DataGridView();
             this.btn_consultar = new System.Windows.Forms.Button();
+            this.BtnAll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,11 +82,22 @@ namespace FoodBang.Forms.Admin
             this.btn_consultar.UseVisualStyleBackColor = true;
             this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
+            // BtnAll
+            // 
+            this.BtnAll.Location = new System.Drawing.Point(334, 106);
+            this.BtnAll.Name = "BtnAll";
+            this.BtnAll.Size = new System.Drawing.Size(75, 23);
+            this.BtnAll.TabIndex = 5;
+            this.BtnAll.Text = "Ver todos";
+            this.BtnAll.UseVisualStyleBackColor = true;
+            this.BtnAll.Click += new System.EventHandler(this.BtnAll_Click);
+            // 
             // FrmConsultarU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(467, 261);
+            this.Controls.Add(this.BtnAll);
             this.Controls.Add(this.btn_consultar);
             this.Controls.Add(this.dgUser);
             this.Controls.Add(this.txtUser);
@@ -109,5 +121,6 @@ namespace FoodBang.Forms.Admin
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.DataGridView dgUser;
         private System.Windows.Forms.Button btn_consultar;
+        private System.Windows.Forms.Button BtnAll;
     }
 }
