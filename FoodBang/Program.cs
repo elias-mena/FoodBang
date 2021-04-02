@@ -1,4 +1,5 @@
-﻿using FoodBang.Forms.Admin;
+﻿using FoodBang.Forms;
+using FoodBang.Forms.Admin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,14 @@ namespace FoodBang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuAdmin());
+            Application.Run(new FrmWelcome());
+
+            if (Engine.entrar)
+            {
+                FrmLogin f1 = new FrmLogin();
+                f1.ShowDialog();
+
+            }
         }
     }
 }

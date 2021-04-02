@@ -6,18 +6,46 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
 using Npgsql;
+using FoodBang.Forms;
 
 namespace FoodBang
 {
     class Engine
     {
-
+        public static bool entrar = false;
    
         //Retorna la conexión a la base de datos (se debe usar en todas las operaciones)
         public static NpgsqlConnection Conexion()
         {
             NpgsqlConnection conecta = new NpgsqlConnection("Server = localhost; User Id= postgres; Password = homero420; Database = FoodBang;");
             return conecta;
+
+        }
+
+        //Login
+        public static bool Login(String user, String passw)
+        {
+            NpgsqlConnection conn = Conexion();
+            string query = "SELECT COUNT(*) FROM usuario WHERE usuario = '" + user + "' and passw = '" + passw + "';";
+            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
+            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
+            DataTable tabla = new DataTable();
+            datos.Fill(tabla);
+            //Creo un datarow para poder manipular los datos
+            DataRow row = tabla.Rows[0];
+            //MessageBox.Show(row[0].ToString());
+
+            if (row[0].ToString() == "1")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+
+
 
         }
         //Gestionar Usuarios 

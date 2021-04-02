@@ -124,11 +124,23 @@
     <Compile Include="Forms\Admin\MenuAdmin.Designer.cs">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Welcome.cs">
+    <Compile Include="Forms\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Welcome.Designer.cs">
-      <DependentUpon>Welcome.cs</DependentUpon>
+    <Compile Include="Forms\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\FrmCrearCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\FrmCrearCuenta.Designer.cs">
+      <DependentUpon>FrmCrearCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmWelcome.Designer.cs">
+      <DependentUpon>FrmWelcome.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -159,8 +171,14 @@
     <EmbeddedResource Include="Forms\Admin\MenuAdmin.resx">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Welcome.resx">
-      <DependentUpon>Welcome.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\FrmCrearCuenta.resx">
+      <DependentUpon>FrmCrearCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmWelcome.resx">
+      <DependentUpon>FrmWelcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -186,7 +204,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Forms\User\" />
     <Folder Include="Imagenes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

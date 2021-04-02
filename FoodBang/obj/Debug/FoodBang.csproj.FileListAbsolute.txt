@@ -2,7 +2,6 @@ C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\bin\Debug\FoodBang.exe.
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\bin\Debug\FoodBang.exe
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\bin\Debug\FoodBang.pdb
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.csprojAssemblyReference.cache
-C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Form1.resources
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Properties.Resources.resources
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.csproj.GenerateResource.cache
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.csproj.CoreCompileInputs.cache
@@ -31,3 +30,6 @@ C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Form
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.Admin.FrmConsultarC.resources
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.Admin.FrmEliminarC.resources
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.Admin.AllUsers.resources
+C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.FrmLogin.resources
+C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.User.FrmCrearCuenta.resources
+C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.FrmWelcome.resources
