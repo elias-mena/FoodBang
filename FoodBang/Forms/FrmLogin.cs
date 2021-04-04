@@ -19,9 +19,10 @@ namespace FoodBang.Forms
 
         private void btn_ingresar_Click(object sender, EventArgs e)
         {
-            if (Engine.Login(txtUsuario.Text,txtPass.Text))
+            if (Engine.Login(txtUsuario.Text, txtPass.Text))
             {
                 MessageBox.Show("Ingresar");
+                this.Close();
             }
             else
             {

@@ -29,6 +29,7 @@ namespace FoodBang.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,7 +73,7 @@ namespace FoodBang.Forms
             // 
             // btn_registrarse
             // 
-            this.btn_registrarse.Location = new System.Drawing.Point(90, 282);
+            this.btn_registrarse.Location = new System.Drawing.Point(68, 230);
             this.btn_registrarse.Name = "btn_registrarse";
             this.btn_registrarse.Size = new System.Drawing.Size(75, 23);
             this.btn_registrarse.TabIndex = 23;
@@ -81,7 +82,7 @@ namespace FoodBang.Forms
             // 
             // btn_ingresar
             // 
-            this.btn_ingresar.Location = new System.Drawing.Point(271, 282);
+            this.btn_ingresar.Location = new System.Drawing.Point(300, 230);
             this.btn_ingresar.Name = "btn_ingresar";
             this.btn_ingresar.Size = new System.Drawing.Size(75, 23);
             this.btn_ingresar.TabIndex = 24;
@@ -93,15 +94,16 @@ namespace FoodBang.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 369);
+            this.ClientSize = new System.Drawing.Size(420, 332);
             this.Controls.Add(this.btn_ingresar);
             this.Controls.Add(this.btn_registrarse);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLogin";
-            this.Text = "FrmLogin";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -19,10 +19,11 @@ namespace FoodBang
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmWelcome());
-
+            FrmLogin f = new FrmLogin();
+            f.ShowDialog();
             if (Engine.entrar)
             {
-                FrmLogin f1 = new FrmLogin();
+                MenuAdmin f1 = new MenuAdmin();
                 f1.ShowDialog();
 
             }
