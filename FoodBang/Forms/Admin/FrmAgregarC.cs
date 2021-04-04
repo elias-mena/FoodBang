@@ -19,7 +19,16 @@ namespace FoodBang.Forms.Admin
 
         private void FrmAgregarC_Load(object sender, EventArgs e)
         {
-            //cbxCategoria.DataSource = Engine.Categorias();
+            cbxCategorias.DataSource = Engine.Categorias();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string nombre = textBox1.Text;
+            int categoria = cbxCategorias.SelectedIndex;
+            Engine.InsertarComida(nombre,categoria+1);
+            this.Close();
+
         }
     }
 }

@@ -47,7 +47,7 @@ namespace FoodBang.Forms.User
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label5.Location = new System.Drawing.Point(87, 21);
+            this.label5.Location = new System.Drawing.Point(12, 34);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(249, 31);
             this.label5.TabIndex = 14;
@@ -125,8 +125,9 @@ namespace FoodBang.Forms.User
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 23;
-            this.button1.Text = "button1";
+            this.button1.Text = "Regresar ";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -134,14 +135,14 @@ namespace FoodBang.Forms.User
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 24;
-            this.button2.Text = "button2";
+            this.button2.Text = "Registrar ";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // FrmCrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 383);
+            this.ClientSize = new System.Drawing.Size(383, 374);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox4);

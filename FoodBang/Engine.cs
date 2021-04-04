@@ -85,7 +85,6 @@ namespace FoodBang
         public static void InsertarUser(string nombre, string edad, string tipo, string user, string passw)
         {
             NpgsqlConnection conx = Conexion();
-            // La sintaxis de in insert postgres es INSERT INTO tabla(valor1, valor2) VALUES(1, 2); 
             string query = "INSERT INTO usuario (nombre, edad, tipo, usuario, passw)" +
                 " VALUES ('" + nombre + "', " + edad + ", '" + tipo + "', '" + user + "', '" + passw + "');"; 
             // Se abre la conexion
@@ -149,5 +148,34 @@ namespace FoodBang
             return categ;
         }
 
+        //public static int getIndexCategoria(String categoria)
+        //{
+        //    List<string> list = Categorias();
+        //    int index = 1;
+        //    foreach(string c in list)
+        //    {
+        //        if (c.Equals(categoria))
+        //        {
+        //            return index;
+        //        }
+        //        index++;
+        //    }
+        //    return index;
+        //}
+        public static void InsertarComida(string nombre, int categoria)
+        {
+            NpgsqlConnection conx = Conexion();
+            string query = "INSERT INTO comida (nombre, categoria)" +
+                " VALUES ('" + nombre + "', "+ categoria + ");";
+            // Se abre la conexion
+            conx.Open();
+            // Se insertan los datos mediante el query            
+            NpgsqlCommand cmd = new NpgsqlCommand(query, conx);
+            // Se ejecuta el query
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Insertada");
+            conx.Close();
+
+        }
     }
 }

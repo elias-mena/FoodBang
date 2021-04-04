@@ -18,7 +18,7 @@ namespace FoodBang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmEliminarC()); //new FrmWelcome()
+            Application.Run(new FrmWelcome());
             FrmLogin f = new FrmLogin();
             f.ShowDialog();
             if (Engine.entrar)

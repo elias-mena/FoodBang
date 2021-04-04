@@ -22,7 +22,6 @@ namespace FoodBang.Forms
         {
             if (Engine.Login(txtUsuario.Text, txtPass.Text))
             {
-                MessageBox.Show("Ingresar");
                 this.Close();
             }
             else

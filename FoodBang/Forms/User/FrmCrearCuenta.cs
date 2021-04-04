@@ -16,5 +16,10 @@ namespace FoodBang.Forms.User
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

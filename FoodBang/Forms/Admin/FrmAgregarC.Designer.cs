@@ -33,7 +33,7 @@ namespace FoodBang.Forms.Admin
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cbxCategoria = new System.Windows.Forms.ComboBox();
+            this.cbxCategorias = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -62,13 +62,13 @@ namespace FoodBang.Forms.Admin
             this.textBox1.Size = new System.Drawing.Size(121, 20);
             this.textBox1.TabIndex = 2;
             // 
-            // cbxCategoria
+            // cbxCategorias
             // 
-            this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(93, 96);
-            this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(121, 21);
-            this.cbxCategoria.TabIndex = 3;
+            this.cbxCategorias.FormattingEnabled = true;
+            this.cbxCategorias.Location = new System.Drawing.Point(93, 96);
+            this.cbxCategorias.Name = "cbxCategorias";
+            this.cbxCategorias.Size = new System.Drawing.Size(121, 21);
+            this.cbxCategorias.TabIndex = 3;
             // 
             // button1
             // 
@@ -79,6 +79,7 @@ namespace FoodBang.Forms.Admin
             this.button1.TabIndex = 4;
             this.button1.Text = "Insertar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmAgregarC
             // 
@@ -86,7 +87,7 @@ namespace FoodBang.Forms.Admin
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(241, 261);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.cbxCategoria);
+            this.Controls.Add(this.cbxCategorias);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -105,7 +106,7 @@ namespace FoodBang.Forms.Admin
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox cbxCategoria;
+        private System.Windows.Forms.ComboBox cbxCategorias;
         private System.Windows.Forms.Button button1;
     }
 }
