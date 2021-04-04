@@ -21,5 +21,10 @@ namespace FoodBang.Forms.Admin
         {
             dgvComida.DataSource = Engine.ConsultarComidas();
         }
+
+        private void FrmConsultarC_Load(object sender, EventArgs e)
+        {
+            cbxCategorias.DataSource = Engine.Categorias();
+        }
     }
 }

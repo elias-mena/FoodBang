@@ -155,6 +155,7 @@ namespace FoodBang.Forms.User
             this.Controls.Add(this.label5);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCrearCuenta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear Cuenta";
             this.ResumeLayout(false);
             this.PerformLayout();

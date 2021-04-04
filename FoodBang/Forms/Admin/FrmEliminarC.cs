@@ -16,5 +16,10 @@ namespace FoodBang.Forms.Admin
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dgvInfo.DataSource = Engine.ConsultarComidasID();
+        }
     }
 }

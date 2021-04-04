@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FoodBang.Forms.User;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,10 @@ namespace FoodBang.Forms
             }
         }
 
-
+        private void btn_registrarse_Click(object sender, EventArgs e)
+        {
+            FrmCrearCuenta f = new FrmCrearCuenta();
+            f.ShowDialog();
+        }
     }
 }

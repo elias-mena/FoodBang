@@ -43,15 +43,16 @@ namespace FoodBang.Forms.Admin
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 24);
+            this.label1.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 13);
+            this.label1.Size = new System.Drawing.Size(318, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Digite el Usuario que desea eliminar";
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(213, 24);
+            this.txtUser.Location = new System.Drawing.Point(348, 26);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(230, 20);
             this.txtUser.TabIndex = 1;

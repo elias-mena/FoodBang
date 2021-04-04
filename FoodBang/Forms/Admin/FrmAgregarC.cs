@@ -16,5 +16,10 @@ namespace FoodBang.Forms.Admin
         {
             InitializeComponent();
         }
+
+        private void FrmAgregarC_Load(object sender, EventArgs e)
+        {
+            //cbxCategoria.DataSource = Engine.Categorias();
+        }
     }
 }
