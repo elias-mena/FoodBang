@@ -26,5 +26,11 @@ namespace FoodBang.Forms.Admin
         {
             cbxCategorias.DataSource = Engine.Categorias();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            int categoria = cbxCategorias.SelectedIndex;
+            dgvComida.DataSource = Engine.ConsultarComidasCategoria(categoria+1);
+        }
     }
 }

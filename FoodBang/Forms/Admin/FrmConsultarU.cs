@@ -20,6 +20,11 @@ namespace FoodBang.Forms.Admin
         private void btn_consultar_Click(object sender, EventArgs e)
         {
             dgUser.DataSource = Engine.ConsultarUsuario(txtUser.Text);
+            if (dgUser.Rows.Count == 1)
+            {
+                MessageBox.Show("No existe nadie con ese nombre de usuario");
+
+            }
         }
 
         private void BtnAll_Click(object sender, EventArgs e)

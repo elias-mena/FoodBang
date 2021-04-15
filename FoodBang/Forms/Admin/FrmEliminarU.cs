@@ -37,6 +37,7 @@ namespace FoodBang.Forms.Admin
         {
             Engine.EliminarUser(txtUser.Text);
             txtUser.Text = "";
+            dgUser.DataSource = "";
         }
     }
 }

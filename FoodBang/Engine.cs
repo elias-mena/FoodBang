@@ -123,6 +123,19 @@ namespace FoodBang
             datos.Fill(tabla);
             return tabla;
         }
+        public static DataTable ConsultarComidasCategoria(int categoria)
+        {
+
+            NpgsqlConnection conn = Conexion();
+
+            string query = "SELECT a.nombre,b.nombre FROM comida AS a , categoria_comida AS b " +
+                            "WHERE a.categoria = b.id  AND a.categoria = " + categoria + " ORDER BY categoria; ";
+            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
+            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
+            DataTable tabla = new DataTable();
+            datos.Fill(tabla);
+            return tabla;
+        }
         public static List<string> Categorias()
         {
             
@@ -148,20 +161,6 @@ namespace FoodBang
             return categ;
         }
 
-        //public static int getIndexCategoria(String categoria)
-        //{
-        //    List<string> list = Categorias();
-        //    int index = 1;
-        //    foreach(string c in list)
-        //    {
-        //        if (c.Equals(categoria))
-        //        {
-        //            return index;
-        //        }
-        //        index++;
-        //    }
-        //    return index;
-        //}
         public static void InsertarComida(string nombre, int categoria)
         {
             NpgsqlConnection conx = Conexion();
