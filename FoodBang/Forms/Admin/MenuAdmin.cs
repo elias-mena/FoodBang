@@ -53,5 +53,17 @@ namespace FoodBang.Forms.Admin
             FrmEliminarC f = new FrmEliminarC();
             f.ShowDialog(); 
         }
+
+        private void GestionarMenusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultarM f = new FrmConsultarM();
+            f.ShowDialog();
+        }
+
+        private void modificarMenusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmModificarM f = new FrmModificarM();
+            f.ShowDialog();
+        }
     }
 }

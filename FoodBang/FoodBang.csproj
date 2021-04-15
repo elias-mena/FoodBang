@@ -113,6 +113,19 @@
     <Compile Include="Forms\Admin\FrmEliminarU.Designer.cs">
       <DependentUpon>FrmEliminarU.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Admin\FrmConsultarM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmConsultarM.Designer.cs">
+      <DependentUpon>FrmConsultarM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmModificarM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\.Designer.cs">
+      <DependentUpon>FrmModificarM.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Admin\MenuAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +175,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\FrmEliminarU.resx">
       <DependentUpon>FrmEliminarU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\FrmConsultarM.resx">
+      <DependentUpon>FrmConsultarM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\FrmModificarM.resx">
+      <DependentUpon>FrmModificarM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\MenuAdmin.resx">
       <DependentUpon>MenuAdmin.cs</DependentUpon>

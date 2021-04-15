@@ -45,6 +45,25 @@ namespace FoodBang
                 return false;
             }
         }
+
+        //Crear cuenta
+        public static void InsertarUser(string nombre, string edad, string user, string passw)
+        {
+            NpgsqlConnection conx = Conexion();
+            string query = "INSERT INTO usuario (nombre, edad, tipo, usuario, passw)" +
+                " VALUES ('" + nombre + "', " + edad + ", '" + 'U' + "', '" + user + "', '" + passw + "');";
+            // Se abre la conexion
+            conx.Open();
+            // Se insertan los datos mediante el query            
+            NpgsqlCommand cmd = new NpgsqlCommand(query, conx);
+            // Se ejecuta el query
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Insertado");
+            conx.Close();
+
+        }
+
+
         //Gestionar Usuarios 
         public static DataTable ConsultarUsuario(String user)
         {
@@ -68,7 +87,6 @@ namespace FoodBang
             datos.Fill(tabla);
             return tabla;
         }
-
         public static void EliminarUser(string user)
         {
             NpgsqlConnection conx = Conexion();
@@ -81,7 +99,6 @@ namespace FoodBang
             conx.Close();
 
         }
-
         public static void InsertarUser(string nombre, string edad, string tipo, string user, string passw)
         {
             NpgsqlConnection conx = Conexion();
@@ -111,7 +128,6 @@ namespace FoodBang
             datos.Fill(tabla);
             return tabla;
         }
-
         public static DataTable ConsultarComidasID()
         {
 
@@ -160,7 +176,6 @@ namespace FoodBang
 
             return categ;
         }
-
         public static void InsertarComida(string nombre, int categoria)
         {
             NpgsqlConnection conx = Conexion();
@@ -176,5 +191,47 @@ namespace FoodBang
             conx.Close();
 
         }
+
+        //Menu
+        public static DataTable ConsultarMenu(int rest)
+        {
+
+            NpgsqlConnection conn = Conexion();
+            string query = "SELECT c.nombre, m.precio " +
+                "FROM comida as c, menu as m " +
+                "WHERE m.comida = c.id AND m.restaurant = "+rest+" ;";
+            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
+            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
+            DataTable tabla = new DataTable();
+            datos.Fill(tabla);
+            return tabla;
+        }
+
+        public static List<string> Restaurantes()
+        {
+
+            NpgsqlConnection conn = Conexion();
+            //consultamos las categorías a la base de datos
+            string query = "SELECT nombre FROM restaurant;";
+            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
+            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
+            DataTable tabla = new DataTable();
+            datos.Fill(tabla);
+            List<string> categ = new List<string>();
+            //Creo un datarow para poder manipular los datos
+            DataRow row;
+            //cuento las filas de la tabla
+            int filas = tabla.Rows.Count;
+            for (int i = 0; i < filas; i++)
+            {
+                //llenamos la lista con los restaurantes
+                row = tabla.Rows[i];
+                categ.Add(row[0].ToString());
+            }
+
+            return categ;
+        }
+
+
     }
 }

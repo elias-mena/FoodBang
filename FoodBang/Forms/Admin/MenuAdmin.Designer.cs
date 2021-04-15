@@ -36,12 +36,12 @@ namespace FoodBang.Forms.Admin
             this.ConsultarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GestionarRestaurantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AgregarRestauranteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GestionarMenusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GestionarComidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AgregarComidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ConsultarComidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EliminarComidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarMenusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +72,7 @@ namespace FoodBang.Forms.Admin
             // 
             this.AgregarUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("AgregarUsuarioToolStripMenuItem.Image")));
             this.AgregarUsuarioToolStripMenuItem.Name = "AgregarUsuarioToolStripMenuItem";
-            this.AgregarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AgregarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.AgregarUsuarioToolStripMenuItem.Text = "Agregar Usuario";
             this.AgregarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.agregarUsuarioToolStripMenuItem_Click);
             // 
@@ -80,7 +80,7 @@ namespace FoodBang.Forms.Admin
             // 
             this.ConsultarUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ConsultarUsuarioToolStripMenuItem.Image")));
             this.ConsultarUsuarioToolStripMenuItem.Name = "ConsultarUsuarioToolStripMenuItem";
-            this.ConsultarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ConsultarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.ConsultarUsuarioToolStripMenuItem.Text = "Consultar Usuario";
             this.ConsultarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.consultarUsuarioToolStripMenuItem_Click);
             // 
@@ -88,33 +88,27 @@ namespace FoodBang.Forms.Admin
             // 
             this.EliminarUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("EliminarUsuarioToolStripMenuItem.Image")));
             this.EliminarUsuarioToolStripMenuItem.Name = "EliminarUsuarioToolStripMenuItem";
-            this.EliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.EliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.EliminarUsuarioToolStripMenuItem.Text = "Eliminar Usuario";
             this.EliminarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.eliminarUsuarioToolStripMenuItem_Click);
             // 
             // GestionarRestaurantesToolStripMenuItem
             // 
             this.GestionarRestaurantesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AgregarRestauranteToolStripMenuItem,
-            this.GestionarMenusToolStripMenuItem});
+            this.GestionarMenusToolStripMenuItem,
+            this.modificarMenusToolStripMenuItem});
             this.GestionarRestaurantesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("GestionarRestaurantesToolStripMenuItem.Image")));
             this.GestionarRestaurantesToolStripMenuItem.Name = "GestionarRestaurantesToolStripMenuItem";
-            this.GestionarRestaurantesToolStripMenuItem.Size = new System.Drawing.Size(155, 20);
-            this.GestionarRestaurantesToolStripMenuItem.Text = "Gestionar Restaurantes";
-            // 
-            // AgregarRestauranteToolStripMenuItem
-            // 
-            this.AgregarRestauranteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("AgregarRestauranteToolStripMenuItem.Image")));
-            this.AgregarRestauranteToolStripMenuItem.Name = "AgregarRestauranteToolStripMenuItem";
-            this.AgregarRestauranteToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.AgregarRestauranteToolStripMenuItem.Text = "Agregar Restaurante";
+            this.GestionarRestaurantesToolStripMenuItem.Size = new System.Drawing.Size(124, 20);
+            this.GestionarRestaurantesToolStripMenuItem.Text = "Gestionar Menus";
             // 
             // GestionarMenusToolStripMenuItem
             // 
             this.GestionarMenusToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("GestionarMenusToolStripMenuItem.Image")));
             this.GestionarMenusToolStripMenuItem.Name = "GestionarMenusToolStripMenuItem";
-            this.GestionarMenusToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.GestionarMenusToolStripMenuItem.Text = "Gestionar Menus";
+            this.GestionarMenusToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.GestionarMenusToolStripMenuItem.Text = "Consultar Menus";
+            this.GestionarMenusToolStripMenuItem.Click += new System.EventHandler(this.GestionarMenusToolStripMenuItem_Click);
             // 
             // GestionarComidasToolStripMenuItem
             // 
@@ -131,7 +125,7 @@ namespace FoodBang.Forms.Admin
             // 
             this.AgregarComidaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("AgregarComidaToolStripMenuItem.Image")));
             this.AgregarComidaToolStripMenuItem.Name = "AgregarComidaToolStripMenuItem";
-            this.AgregarComidaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AgregarComidaToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.AgregarComidaToolStripMenuItem.Text = "Agregar Comida";
             this.AgregarComidaToolStripMenuItem.Click += new System.EventHandler(this.agregarComidaToolStripMenuItem_Click);
             // 
@@ -139,7 +133,7 @@ namespace FoodBang.Forms.Admin
             // 
             this.ConsultarComidaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ConsultarComidaToolStripMenuItem.Image")));
             this.ConsultarComidaToolStripMenuItem.Name = "ConsultarComidaToolStripMenuItem";
-            this.ConsultarComidaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ConsultarComidaToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.ConsultarComidaToolStripMenuItem.Text = "Consultar Comida";
             this.ConsultarComidaToolStripMenuItem.Click += new System.EventHandler(this.consultarComidaToolStripMenuItem_Click);
             // 
@@ -147,9 +141,17 @@ namespace FoodBang.Forms.Admin
             // 
             this.EliminarComidaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("EliminarComidaToolStripMenuItem.Image")));
             this.EliminarComidaToolStripMenuItem.Name = "EliminarComidaToolStripMenuItem";
-            this.EliminarComidaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.EliminarComidaToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.EliminarComidaToolStripMenuItem.Text = "Eliminar Comida";
             this.EliminarComidaToolStripMenuItem.Click += new System.EventHandler(this.eliminarComidaToolStripMenuItem_Click);
+            // 
+            // modificarMenusToolStripMenuItem
+            // 
+            this.modificarMenusToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("modificarMenusToolStripMenuItem.Image")));
+            this.modificarMenusToolStripMenuItem.Name = "modificarMenusToolStripMenuItem";
+            this.modificarMenusToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarMenusToolStripMenuItem.Text = "Modificar Menus";
+            this.modificarMenusToolStripMenuItem.Click += new System.EventHandler(this.modificarMenusToolStripMenuItem_Click);
             // 
             // MenuAdmin
             // 
@@ -176,12 +178,12 @@ namespace FoodBang.Forms.Admin
         private System.Windows.Forms.ToolStripMenuItem AgregarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ConsultarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem EliminarUsuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem GestionarRestaurantesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem AgregarRestauranteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem GestionarMenusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem GestionarComidasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AgregarComidaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ConsultarComidaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem EliminarComidaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem GestionarRestaurantesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem GestionarMenusToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarMenusToolStripMenuItem;
     }
 }
