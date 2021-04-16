@@ -25,8 +25,30 @@ namespace FoodBang.Forms.Admin
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            int rest = cbxRest.SelectedIndex;
-            dgvMenu.DataSource = Engine.ConsultarMenu(rest + 1);
+            int rest = cbxRest.SelectedIndex + 1;
+            dgvMenu.DataSource = Engine.ConsultarMenu(rest);
         }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            int rest = cbxRest.SelectedIndex + 1;
+            dgvInfo.DataSource = Engine.ConsultarComidasDisponibles(rest);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int comida = (int)txtEliminar.Value;
+            Engine.EliminarComidaM(comida);
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            int rest = cbxRest.SelectedIndex + 1;
+            int comida = (int) txtAgregar.Value;
+            int precio = int.Parse(txtPrecio.Text);
+            Engine.InsertarComidaM(rest,comida,precio);
+        }
+
+  
     }
 }

@@ -115,6 +115,7 @@ namespace FoodBang.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.Text = "Login";
             this.ResumeLayout(false);

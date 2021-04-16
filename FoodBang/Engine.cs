@@ -63,7 +63,6 @@ namespace FoodBang
 
         }
 
-
         //Gestionar Usuarios 
         public static DataTable ConsultarUsuario(String user)
         {
@@ -191,13 +190,25 @@ namespace FoodBang
             conx.Close();
 
         }
+        public static void EliminarComida(int comida)
+        {
+            NpgsqlConnection conx = Conexion();
+            string query = "DELETE FROM comida WHERE comida  = '" + comida + "'";
+            // Se abre la conexion
+            conx.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand(query, conx);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Comida Eliminada");
+            conx.Close();
 
-        //Menu
+        }
+
+        //Gestionar Menús
         public static DataTable ConsultarMenu(int rest)
         {
 
             NpgsqlConnection conn = Conexion();
-            string query = "SELECT c.nombre, m.precio " +
+            string query = "SELECT c.nombre,m.precio, m.comida as id " +
                 "FROM comida as c, menu as m " +
                 "WHERE m.comida = c.id AND m.restaurant = "+rest+" ;";
             NpgsqlCommand conector = new NpgsqlCommand(query, conn);
@@ -206,7 +217,6 @@ namespace FoodBang
             datos.Fill(tabla);
             return tabla;
         }
-
         public static List<string> Restaurantes()
         {
 
@@ -231,7 +241,48 @@ namespace FoodBang
 
             return categ;
         }
+        public static void InsertarComidaM(int rest, int comida, int precio)
+        {
+            NpgsqlConnection conx = Conexion();
+            string query = "INSERT INTO menu(restaurant, comida, precio)" +
+                " VALUES ('" + rest + "', " + comida + "," + precio + ");";
+            // Se abre la conexion
+            conx.Open();
+            // Se insertan los datos mediante el query            
+            NpgsqlCommand cmd = new NpgsqlCommand(query, conx);
+            // Se ejecuta el query
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Comida Agregada");
+            conx.Close();
 
+        }
+        public static void EliminarComidaM(int comida)
+        {
+            NpgsqlConnection conx = Conexion();
+            string query = "DELETE FROM menu WHERE comida  = '" + comida + "'";
+            // Se abre la conexion
+            conx.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand(query, conx);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Comida Eliminada del menú");
+            conx.Close();
+
+        }
+        public static DataTable ConsultarComidasDisponibles(int rest)
+        {
+
+            NpgsqlConnection conn = Conexion();
+            string query =  "SELECT a.id,a.nombre,b.nombre as categoria " +
+                             "FROM comida as a, categoria_comida as b, menu as c" +
+                             " WHERE a.categoria = b.id " +
+                             " AND a.id NOT IN ( SELECT comida FROM menu WHERE restaurant = " + rest + ");";
+
+            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
+            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
+            DataTable tabla = new DataTable();
+            datos.Fill(tabla);
+            return tabla;
+        }
 
     }
 }

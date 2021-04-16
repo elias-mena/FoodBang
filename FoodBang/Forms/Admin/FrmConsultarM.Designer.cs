@@ -69,7 +69,10 @@ namespace FoodBang.Forms.Admin
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.cbxRest);
             this.Controls.Add(this.dgvMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimizeBox = false;
             this.Name = "FrmConsultarM";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestionar Menus";
             this.Load += new System.EventHandler(this.FrmMenus_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).EndInit();

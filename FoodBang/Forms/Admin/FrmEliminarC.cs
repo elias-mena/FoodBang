@@ -21,5 +21,11 @@ namespace FoodBang.Forms.Admin
         {
             dgvInfo.DataSource = Engine.ConsultarComidasID();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int comida = (int) txtID.Value;
+            Engine.EliminarComida(comida);
+        }
     }
 }
