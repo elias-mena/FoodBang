@@ -68,14 +68,29 @@ CREATE TABLE pedido
     CONSTRAINT pedido_pkey PRIMARY KEY (id)
 )
 
-INSERT INTO usuario(nombre, edad, tipo, usuario, passw)VALUES ( , , , , );
+--No se agrega el campo id al hacer inserts ya que es incremental
 
-INSERT INTO restaurant(nombre, direccion, ) VALUES ( , );
+INSERT INTO usuario(nombre, edad, tipo, usuario, passw)VALUES ( 'Elías', 21, 'A', 'elias1', 1234);
+INSERT INTO usuario(nombre, edad, tipo, usuario, passw)VALUES ( 'Sebastián', 20, 'A', 'sebastian1', 1234);
+INSERT INTO usuario(nombre, edad, tipo, usuario, passw)VALUES ( 'Bruno', 21, 'A', 'bruno1', 1234);
 
-INSERT INTO comida(nombre, categoria) VALUES ( , );
+INSERT INTO usuario(nombre, edad, tipo, usuario, passw)VALUES ( 'Pablo', 24, 'U', 'pablo1', 1234);
 
-INSERT INTO categoria_comida(nombre) VALUES ( );
+INSERT INTO restaurant(nombre, direccion) VALUES ( 'Mcdonalds','Avenida Central');
+INSERT INTO restaurant(nombre, direccion) VALUES ( 'Subway','Avenida Central');
+INSERT INTO restaurant(nombre, direccion) VALUES ( 'Pizza Hut','Avenida Central');
 
-INSERT INTO menu(restaurant, comida, precio) VALUES ( , , );
+INSERT INTO categoria_comida(nombre) VALUES ('Comida Rápida');
+INSERT INTO categoria_comida(nombre) VALUES ('Comida China');
+INSERT INTO categoria_comida(nombre) VALUES ('Comida Tradicional');
+INSERT INTO categoria_comida(nombre) VALUES ('Comida Saludable');
+INSERT INTO categoria_comida(nombre) VALUES ('Bebidas');
 
-INSERT INTO pedido(cliente, detalle, monto) VALUES ( , , );
+INSERT INTO comida(nombre, categoria) VALUES ( 'Hamburguesa',1);
+INSERT INTO comida(nombre, categoria) VALUES ( 'Arroz Cantonés',2);
+INSERT INTO comida(nombre, categoria) VALUES ( 'Gallo Pinto',3);
+INSERT INTO comida(nombre, categoria) VALUES ( 'Burrito',1);
+
+INSERT INTO menu(restaurant, comida, precio) VALUES ( 1, 1, 2500);
+
+INSERT INTO pedido(cliente, detalle, monto) VALUES ( 'pablo1', '-Hamburguesa: 2500 -Burrito:2500',2500 );
