@@ -47,6 +47,8 @@ namespace FoodBang.Forms.Admin
             this.dgvInfo = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbxRest2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEliminar)).BeginInit();
@@ -206,11 +208,31 @@ namespace FoodBang.Forms.Admin
             this.label7.TabIndex = 24;
             this.label7.Text = "Agregar Comida";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(41, 323);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(23, 16);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "ID";
+            // 
+            // cbxRest2
+            // 
+            this.cbxRest2.FormattingEnabled = true;
+            this.cbxRest2.Location = new System.Drawing.Point(193, 112);
+            this.cbxRest2.Name = "cbxRest2";
+            this.cbxRest2.Size = new System.Drawing.Size(118, 21);
+            this.cbxRest2.TabIndex = 26;
+            // 
             // FrmModificarM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 367);
+            this.Controls.Add(this.cbxRest2);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvInfo);
@@ -263,5 +285,7 @@ namespace FoodBang.Forms.Admin
         private System.Windows.Forms.DataGridView dgvInfo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbxRest2;
     }
 }

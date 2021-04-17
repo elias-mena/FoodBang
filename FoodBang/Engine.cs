@@ -256,10 +256,10 @@ namespace FoodBang
             conx.Close();
 
         }
-        public static void EliminarComidaM(int comida)
+        public static void EliminarComidaM(int rest, int comida)
         {
             NpgsqlConnection conx = Conexion();
-            string query = "DELETE FROM menu WHERE comida  = '" + comida + "'";
+            string query = "DELETE FROM menu WHERE restaurant = '"+rest+"' AND comida  = '" + comida + "'";
             // Se abre la conexion
             conx.Open();
             NpgsqlCommand cmd = new NpgsqlCommand(query, conx);

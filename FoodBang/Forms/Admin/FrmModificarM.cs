@@ -20,6 +20,8 @@ namespace FoodBang.Forms.Admin
         private void FrmModificarMenu_Load(object sender, EventArgs e)
         {
             cbxRest.DataSource = Engine.Restaurantes();
+            cbxRest2.DataSource = Engine.Restaurantes();
+
 
         }
 
@@ -38,7 +40,8 @@ namespace FoodBang.Forms.Admin
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             int comida = (int)txtEliminar.Value;
-            Engine.EliminarComidaM(comida);
+            int rest = cbxRest.SelectedIndex + 1;
+            Engine.EliminarComidaM(rest,comida);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
