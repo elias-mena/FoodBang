@@ -13,7 +13,10 @@ namespace FoodBang
     class Engine
     {
         public static bool entrar = false;
-   
+        public static string tipoUsuario = "";
+        public static int totalPedido;
+        public static List<string> infoPedido = new List<string>();
+
         //Retorna la conexión a la base de datos (se debe usar en todas las operaciones)
         public static NpgsqlConnection Conexion()
         {
@@ -283,6 +286,23 @@ namespace FoodBang
             datos.Fill(tabla);
             return tabla;
         }
+        public static void InfoComida(int rest, int comida)
+        {
 
+            NpgsqlConnection conn = Conexion();
+            string query = "SELECT c.nombre, m.precio " +
+                "FROM comida as c, menu as m " +
+                "WHERE m.comida = c.id AND m.restaurant = " + rest + " AND m.comida = '" + comida + "';";
+            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
+            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
+            DataTable tabla = new DataTable();
+            datos.Fill(tabla);
+            //Creo un datarow para poder manipular los datos
+            DataRow row = tabla.Rows[0];
+            string info = row[0].ToString() + ": " + row[1].ToString();
+            totalPedido += int.Parse(row[1].ToString());
+            infoPedido.Add(info);
+            MessageBox.Show("Comida Agregada!");
+        }
     }
 }

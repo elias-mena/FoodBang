@@ -150,6 +150,18 @@
     <Compile Include="Forms\FrmWelcome.Designer.cs">
       <DependentUpon>FrmWelcome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\User\FrmMenuUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\FrmMenuUser.Designer.cs">
+      <DependentUpon>FrmMenuUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\FrmPreparando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\FrmPreparando.Designer.cs">
+      <DependentUpon>FrmPreparando.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Admin\AllUsers.resx">
@@ -193,6 +205,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmWelcome.resx">
       <DependentUpon>FrmWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\FrmMenuUser.resx">
+      <DependentUpon>FrmMenuUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\FrmPreparando.resx">
+      <DependentUpon>FrmPreparando.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

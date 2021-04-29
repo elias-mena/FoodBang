@@ -35,3 +35,5 @@ C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Form
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.FrmWelcome.resources
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.Admin.FrmConsultarM.resources
 C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.Admin.FrmModificarM.resources
+C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.User.FrmMenuUser.resources
+C:\Users\Elias\source\repos\Homerox710\FoodBang\FoodBang\obj\Debug\FoodBang.Forms.User.FrmPreparando.resources
