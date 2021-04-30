@@ -89,7 +89,15 @@ namespace FoodBang.Forms.User
         private void btnAdd_Click(object sender, EventArgs e)
         {
             int comida = (int)txtId.Value;
-            Engine.InfoComida(comida);
+            List<string> comidas = Engine.ComidasMenu();
+            if (comidas.Contains(comida.ToString()))
+            {
+                Engine.InfoComida(comida);
+            }
+            else
+            {
+                MessageBox.Show("No existe un producto con ese ID");
+            }
         }
     }
 }

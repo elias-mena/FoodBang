@@ -12,6 +12,7 @@ using FoodBang.Forms.User;
 
 namespace FoodBang
 {
+    //En esta clase se encuentra toda la lógica del programa
     class Engine
     {
         public static bool entrar = false;
@@ -26,7 +27,7 @@ namespace FoodBang
         public static NpgsqlConnection Conexion()
         {
             NpgsqlConnection conecta = 
-            new NpgsqlConnection("Server = localhost; User Id= postgres; Password = pass; Database = FoodBang;");
+            new NpgsqlConnection("Server = localhost; User Id= postgres; Password = homero420; Database = FoodBang;");
             return conecta;
 
         }
@@ -352,13 +353,13 @@ namespace FoodBang
             datos.Fill(tabla);
             return tabla;
         }
-        public static void InfoComida(int rest, int comida)
+        public static void InfoComida(int comida)
         {
 
             NpgsqlConnection conn = Conexion();
             string query = "SELECT c.nombre, m.precio " +
-                "FROM comida as c, menu as m, restaurant r" +
-                "WHERE m.comida = c.id AND m.restaurant = r.id AND m.comida = '" + comida + "';";
+                "FROM comida c, menu m " +
+                "WHERE m.comida = c.id AND m.comida = '" + comida + "';";
             NpgsqlCommand conector = new NpgsqlCommand(query, conn);
             NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
             DataTable tabla = new DataTable();
@@ -369,6 +370,29 @@ namespace FoodBang
             totalPedido += int.Parse(row[1].ToString());
             infoPedido.Add(info);
             MessageBox.Show("Comida Agregada!");
+        }
+        public static List<string> ComidasMenu()
+        {
+            NpgsqlConnection conn = Conexion();
+            //consultamos las categorías a la base de datos
+            string query = "SELECT comida FROM menu;";
+            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
+            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
+            DataTable tabla = new DataTable();
+            datos.Fill(tabla);
+            List<string> comidas = new List<string>();
+            //Creo un datarow para poder manipular los datos
+            DataRow row;
+            //cuento las filas de la tabla
+            int filas = tabla.Rows.Count;
+            for (int i = 0; i < filas; i++)
+            {
+                //llenamos la lista con los restaurantes
+                row = tabla.Rows[i];
+                comidas.Add(row[0].ToString());
+            }
+
+            return comidas;
         }
     }
 }

@@ -41,7 +41,15 @@ namespace FoodBang.Forms.Admin
         {
             int comida = (int)txtEliminar.Value;
             int rest = cbxRest.SelectedIndex + 1;
-            Engine.EliminarComidaM(rest,comida);
+            if (comida < 1 || comida > Engine.ConsultarComidasDisponibles(rest).Rows.Count)
+            {
+                Engine.EliminarComidaM(rest, comida);
+            }
+            else
+            {
+                MessageBox.Show("No existe un producto con ese ID");
+            }
+            
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -49,7 +57,15 @@ namespace FoodBang.Forms.Admin
             int rest = cbxRest.SelectedIndex + 1;
             int comida = (int) txtAgregar.Value;
             int precio = int.Parse(txtPrecio.Text);
-            Engine.InsertarComidaM(rest,comida,precio);
+            if (comida < 1 || comida > Engine.ConsultarComidasDisponibles(rest).Rows.Count)
+            {
+                Engine.InsertarComidaM(rest, comida, precio);
+            }
+            else
+            {
+                MessageBox.Show("No existe un producto con ese ID");
+            }
+            
         }
 
   
