@@ -88,9 +88,8 @@ namespace FoodBang.Forms.User
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            int resta = rest;
             int comida = (int)txtId.Value;
-            Engine.InfoComida(resta, comida);
+            Engine.InfoComida(comida);
         }
     }
 }
