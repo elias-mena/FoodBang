@@ -26,7 +26,7 @@ namespace FoodBang
         public static NpgsqlConnection Conexion()
         {
             NpgsqlConnection conecta = 
-            new NpgsqlConnection("Server = localhost; User Id= postgres; Password = homero420; Database = FoodBang;");
+            new NpgsqlConnection("Server = localhost; User Id= postgres; Password = pass; Database = FoodBang;");
             return conecta;
 
         }
@@ -357,8 +357,8 @@ namespace FoodBang
 
             NpgsqlConnection conn = Conexion();
             string query = "SELECT c.nombre, m.precio " +
-                "FROM comida as c, menu as m " +
-                "WHERE m.comida = c.id AND m.restaurant = " + rest + " AND m.comida = '" + comida + "';";
+                "FROM comida as c, menu as m, restaurant r" +
+                "WHERE m.comida = c.id AND m.restaurant = r.id AND m.comida = '" + comida + "';";
             NpgsqlCommand conector = new NpgsqlCommand(query, conn);
             NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
             DataTable tabla = new DataTable();
