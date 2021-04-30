@@ -35,5 +35,21 @@ namespace FoodBang.Forms
             FrmCrearCuenta f = new FrmCrearCuenta();
             f.ShowDialog();
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Engine.salir = true;
+            Application.Exit();
+        }
     }
 }

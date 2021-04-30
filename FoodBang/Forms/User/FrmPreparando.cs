@@ -117,14 +117,27 @@ namespace FoodBang.Forms.User
             {
                 proEntregando.Increment(100);
                 MessageBox.Show("El pedido ha llegado!");
+                Engine.RegistraPedido(info,Engine.totalPedido);
+                Engine.ClearPedido();
+                this.Dispose();
+                this.Close();
             }
         }
 
         private void FrmPreparando_Load(object sender, EventArgs e)
         {
+            minutes = 10;
             seconds = 10;
             tempo.Start();
             progresoOrRecibido.Increment(100);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Engine.ClearPedido();
+            this.Dispose();
+            this.Close();
+
         }
 
         private void button1_Click(object sender, EventArgs e)

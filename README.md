@@ -23,6 +23,10 @@ Hay 2 tipos de usuarios:
 - Administrador
 - Cliente
 
+---
+
+Para entrar como administrador hay que logearse con el usuario "admin", para el menú de cliente el usuario es "user" y contraseña "1234" para ambos.
+
 El usuario administrador tiene un menú donde puede consultar los datos de todos los usuarios de la app y modificarlos, así como los menús y las comidas.
 
 ![FoodBang/Imagenes/Untitled.png](FoodBang/Imagenes/Untitled.png)

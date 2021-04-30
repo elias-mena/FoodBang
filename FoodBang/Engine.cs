@@ -12,6 +12,7 @@ using FoodBang.Forms.User;
 
 namespace FoodBang
 {
+    //En esta clase se encuentra toda la lógica del programa
     class Engine
     {
         public static bool entrar = false;
@@ -21,12 +22,13 @@ namespace FoodBang
         public static string tipoUsuario = "";
         public static int totalPedido = 0;
         public static List<string> infoPedido = new List<string>();
+        public static bool salir = false;
 
         //Retorna la conexión a la base de datos (se debe usar en todas las operaciones)
         public static NpgsqlConnection Conexion()
         {
             NpgsqlConnection conecta = 
-            new NpgsqlConnection("Server = localhost; User Id= postgres; Password = pass; Database = FoodBang;");
+            new NpgsqlConnection("Server = localhost; User Id= postgres; Password = 1234; Database = FoodBang;");
             return conecta;
 
         }
@@ -94,12 +96,16 @@ namespace FoodBang
          entrarU = false;
          tipoUsuario = "";
          totalPedido = 0;
-            logO = true;
+         logO = true;
 
             infoPedido = new List<string>();
             
         }
-
+        public static void ClearPedido()
+        {
+            totalPedido = 0;
+            infoPedido = new List<string>();
+        }
         public static void UserMenu()
         {
             if (Engine.entrarA)
@@ -352,13 +358,13 @@ namespace FoodBang
             datos.Fill(tabla);
             return tabla;
         }
-        public static void InfoComida(int rest, int comida)
+        public static void InfoComida(int comida)
         {
 
             NpgsqlConnection conn = Conexion();
             string query = "SELECT c.nombre, m.precio " +
-                "FROM comida as c, menu as m, restaurant r" +
-                "WHERE m.comida = c.id AND m.restaurant = r.id AND m.comida = '" + comida + "';";
+                "FROM comida c, menu m " +
+                "WHERE m.comida = c.id AND m.comida = '" + comida + "';";
             NpgsqlCommand conector = new NpgsqlCommand(query, conn);
             NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
             DataTable tabla = new DataTable();
@@ -369,6 +375,43 @@ namespace FoodBang
             totalPedido += int.Parse(row[1].ToString());
             infoPedido.Add(info);
             MessageBox.Show("Comida Agregada!");
+        }
+        public static List<string> ComidasMenu()
+        {
+            NpgsqlConnection conn = Conexion();
+            //consultamos las categorías a la base de datos
+            string query = "SELECT comida FROM menu;";
+            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
+            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
+            DataTable tabla = new DataTable();
+            datos.Fill(tabla);
+            List<string> comidas = new List<string>();
+            //Creo un datarow para poder manipular los datos
+            DataRow row;
+            //cuento las filas de la tabla
+            int filas = tabla.Rows.Count;
+            for (int i = 0; i < filas; i++)
+            {
+                //llenamos la lista con los restaurantes
+                row = tabla.Rows[i];
+                comidas.Add(row[0].ToString());
+            }
+
+            return comidas;
+        }
+
+        public static void RegistraPedido(string detalle, int monto)
+        {
+            NpgsqlConnection conx = Conexion();
+            string query = "INSERT INTO pedido (detalle, monto)" +
+                " VALUES ('" + detalle + "', " + monto + ");";
+            // Se abre la conexion
+            conx.Open();
+            // Se insertan los datos mediante el query            
+            NpgsqlCommand cmd = new NpgsqlCommand(query, conx);
+            // Se ejecuta el query
+            cmd.ExecuteNonQuery();
+            conx.Close();
         }
     }
 }

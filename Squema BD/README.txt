@@ -1,0 +1,1 @@
+El Backup está en formato Custom, tienes que restaurarlo desde PgAdmin

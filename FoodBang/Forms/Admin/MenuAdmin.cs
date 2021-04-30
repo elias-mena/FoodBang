@@ -74,6 +74,7 @@ namespace FoodBang.Forms.Admin
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Engine.salir = true;
             Application.Exit();
         }
 

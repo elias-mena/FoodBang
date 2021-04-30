@@ -24,7 +24,7 @@ namespace FoodBang
             f.ShowDialog();
 
             Engine.UserMenu();
-            while (true)
+            while (!Engine.salir)
             {
                 if(Engine.logO == true)
                 {

@@ -53,8 +53,9 @@ namespace FoodBang.Forms.User
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(130, 53);
             this.button3.TabIndex = 41;
-            this.button3.Text = "Salir";
+            this.button3.Text = "Cancelar Pedido";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -174,7 +175,8 @@ namespace FoodBang.Forms.User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 339);
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.ClientSize = new System.Drawing.Size(662, 347);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

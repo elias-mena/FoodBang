@@ -26,15 +26,22 @@ namespace FoodBang.Forms.User
         }
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            this.Close();
             string inf = "";
             List<string> info = Engine.infoPedido;
             for (int i = 0; i < info.Count; i++)
             {
                 inf = inf + info[i].ToString() + "\n";
             }
-            FrmPreparando f1 = new FrmPreparando(inf);
-            f1.ShowDialog();
+            if (info.Count < 1)
+            {
+                MessageBox.Show("Tiene que agregar algo al carrito");
+
+            }
+            else
+            {
+                FrmPreparando f1 = new FrmPreparando(inf);
+                f1.ShowDialog();
+            }
         }
 
         private void btnMac_Click(object sender, EventArgs e)
@@ -89,7 +96,21 @@ namespace FoodBang.Forms.User
         private void btnAdd_Click(object sender, EventArgs e)
         {
             int comida = (int)txtId.Value;
-            Engine.InfoComida(comida);
+            List<string> comidas = Engine.ComidasMenu();
+            if (comidas.Contains(comida.ToString()))
+            {
+                Engine.InfoComida(comida);
+            }
+            else
+            {
+                MessageBox.Show("No existe un producto con ese ID");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Engine.Logout();
+            this.Close();
         }
     }
 }

@@ -37,6 +37,7 @@ namespace FoodBang.Forms
             this.btn_registrarse = new System.Windows.Forms.Button();
             this.btn_ingresar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPass
@@ -44,7 +45,7 @@ namespace FoodBang.Forms
             this.txtPass.Location = new System.Drawing.Point(83, 169);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(200, 20);
+            this.txtPass.Size = new System.Drawing.Size(252, 20);
             this.txtPass.TabIndex = 22;
             // 
             // label2
@@ -69,12 +70,12 @@ namespace FoodBang.Forms
             // 
             this.txtUsuario.Location = new System.Drawing.Point(83, 119);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(200, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(252, 20);
             this.txtUsuario.TabIndex = 19;
             // 
             // btn_registrarse
             // 
-            this.btn_registrarse.Location = new System.Drawing.Point(83, 233);
+            this.btn_registrarse.Location = new System.Drawing.Point(171, 241);
             this.btn_registrarse.Name = "btn_registrarse";
             this.btn_registrarse.Size = new System.Drawing.Size(75, 23);
             this.btn_registrarse.TabIndex = 23;
@@ -84,7 +85,7 @@ namespace FoodBang.Forms
             // 
             // btn_ingresar
             // 
-            this.btn_ingresar.Location = new System.Drawing.Point(208, 233);
+            this.btn_ingresar.Location = new System.Drawing.Point(83, 241);
             this.btn_ingresar.Name = "btn_ingresar";
             this.btn_ingresar.Size = new System.Drawing.Size(75, 23);
             this.btn_ingresar.TabIndex = 24;
@@ -101,12 +102,25 @@ namespace FoodBang.Forms
             this.label3.Size = new System.Drawing.Size(170, 29);
             this.label3.TabIndex = 25;
             this.label3.Text = "Iniciar Sesión";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(259, 241);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 309);
+            this.CausesValidation = false;
+            this.ClientSize = new System.Drawing.Size(382, 308);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_ingresar);
             this.Controls.Add(this.btn_registrarse);
@@ -116,8 +130,10 @@ namespace FoodBang.Forms
             this.Controls.Add(this.txtUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmLogin";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +148,6 @@ namespace FoodBang.Forms
         private System.Windows.Forms.Button btn_registrarse;
         private System.Windows.Forms.Button btn_ingresar;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }
