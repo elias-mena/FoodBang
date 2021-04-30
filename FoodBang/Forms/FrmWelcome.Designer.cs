@@ -52,6 +52,7 @@ namespace FoodBang
             this.ClientSize = new System.Drawing.Size(465, 388);
             this.Controls.Add(this.btn_continuar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmWelcome";

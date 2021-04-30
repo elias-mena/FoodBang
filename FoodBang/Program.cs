@@ -1,5 +1,6 @@
 ﻿using FoodBang.Forms;
 using FoodBang.Forms.Admin;
+using FoodBang.Forms.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,12 +22,11 @@ namespace FoodBang
             Application.Run(new FrmWelcome());
             FrmLogin f = new FrmLogin();
             f.ShowDialog();
-            if (Engine.entrar)
-            {
-                MenuAdmin f1 = new MenuAdmin();
-                f1.ShowDialog();
 
-            }
+            Engine.UserMenu();
+
+            
+
         }
     }
 }

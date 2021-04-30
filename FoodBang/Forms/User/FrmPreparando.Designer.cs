@@ -30,6 +30,7 @@ namespace FoodBang.Forms.User
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPreparando));
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -78,13 +79,13 @@ namespace FoodBang.Forms.User
             // tiempoEspera
             // 
             this.tiempoEspera.AutoSize = true;
-            this.tiempoEspera.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiempoEspera.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tiempoEspera.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tiempoEspera.Location = new System.Drawing.Point(119, 118);
+            this.tiempoEspera.Location = new System.Drawing.Point(188, 116);
             this.tiempoEspera.Name = "tiempoEspera";
-            this.tiempoEspera.Size = new System.Drawing.Size(459, 55);
+            this.tiempoEspera.Size = new System.Drawing.Size(299, 39);
             this.tiempoEspera.TabIndex = 37;
-            this.tiempoEspera.Text = "Preparando Entrega";
+            this.tiempoEspera.Text = "Tiempo de Espera";
             // 
             // proEntregando
             // 
@@ -116,10 +117,10 @@ namespace FoodBang.Forms.User
             // 
             // temp
             // 
-            this.temp.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.temp.Location = new System.Drawing.Point(251, 193);
+            this.temp.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.temp.Location = new System.Drawing.Point(224, 185);
             this.temp.Name = "temp";
-            this.temp.Size = new System.Drawing.Size(199, 50);
+            this.temp.Size = new System.Drawing.Size(226, 50);
             this.temp.TabIndex = 42;
             this.temp.Text = "00:00:00";
             this.temp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,13 +167,14 @@ namespace FoodBang.Forms.User
             // 
             // tempo
             // 
+            this.tempo.Interval = 25;
             this.tempo.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FrmPreparando
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 351);
+            this.ClientSize = new System.Drawing.Size(658, 339);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -186,8 +188,9 @@ namespace FoodBang.Forms.User
             this.Controls.Add(this.proConCamino);
             this.Controls.Add(this.proPreOrden);
             this.Controls.Add(this.progresoOrRecibido);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPreparando";
-            this.Text = "FrmPreparando";
+            this.Text = "Enviando Pedido";
             this.Load += new System.EventHandler(this.FrmPreparando_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

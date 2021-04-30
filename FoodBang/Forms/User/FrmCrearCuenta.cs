@@ -24,7 +24,20 @@ namespace FoodBang.Forms.User
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string nombre = txtName.Text;
+            string edad = txtEdad.Text;
+            string user = txtUser.Text;
+            string pass = txtPass.Text;
 
+            if (nombre.Length > 1 & edad.Length > 0 & user.Length > 1 & pass.Length > 1)
+            {
+                Engine.InsertarUser(nombre, edad, user, pass);
+            }
+            else
+            {
+                MessageBox.Show("Datos incompletos")
+            }
+            
         }
     }
 }

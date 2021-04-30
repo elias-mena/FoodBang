@@ -41,6 +41,7 @@ namespace FoodBang.Forms.User
             this.btnOG = new System.Windows.Forms.Button();
             this.BtnNA = new System.Windows.Forms.Button();
             this.BtnCarrito = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).BeginInit();
             this.SuspendLayout();
@@ -158,6 +159,17 @@ namespace FoodBang.Forms.User
             this.BtnCarrito.UseVisualStyleBackColor = true;
             this.BtnCarrito.Click += new System.EventHandler(this.btnCarrito_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(336, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 20);
+            this.label1.TabIndex = 93;
+            this.label1.Text = "Menú ";
+            // 
             // FrmMenuUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,6 +177,7 @@ namespace FoodBang.Forms.User
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(716, 419);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnCarrito);
             this.Controls.Add(this.BtnNA);
             this.Controls.Add(this.btnOG);
@@ -176,12 +189,14 @@ namespace FoodBang.Forms.User
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.dgvInfo);
             this.Controls.Add(this.BtnPagar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMenuUser";
             this.Text = "FrmMenuUser";
             this.Load += new System.EventHandler(this.FrmMenuUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -197,5 +212,6 @@ namespace FoodBang.Forms.User
         private System.Windows.Forms.Button btnOG;
         private System.Windows.Forms.Button BtnNA;
         private System.Windows.Forms.Button BtnCarrito;
+        private System.Windows.Forms.Label label1;
     }
 }

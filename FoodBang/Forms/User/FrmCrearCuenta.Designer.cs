@@ -31,16 +31,16 @@ namespace FoodBang.Forms.User
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCrearCuenta));
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.Edad = new System.Windows.Forms.Label();
+            this.txtEdad = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label5
@@ -53,35 +53,18 @@ namespace FoodBang.Forms.User
             this.label5.TabIndex = 14;
             this.label5.Text = "Creación de cuenta";
             // 
-            // textBox3
+            // txtPass
             // 
-            this.textBox3.Location = new System.Drawing.Point(147, 223);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(200, 20);
-            this.textBox3.TabIndex = 20;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 226);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 13);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Confirmar Contraseña";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(147, 179);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 18;
+            this.txtPass.Location = new System.Drawing.Point(147, 204);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(200, 20);
+            this.txtPass.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 182);
+            this.label2.Location = new System.Drawing.Point(25, 211);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 17;
@@ -96,16 +79,16 @@ namespace FoodBang.Forms.User
             this.label1.TabIndex = 16;
             this.label1.Text = "Nombre";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(147, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 15;
+            this.txtName.Location = new System.Drawing.Point(147, 102);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(200, 20);
+            this.txtName.TabIndex = 15;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(147, 272);
+            this.button1.Location = new System.Drawing.Point(167, 252);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 23;
@@ -115,7 +98,7 @@ namespace FoodBang.Forms.User
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(272, 272);
+            this.button2.Location = new System.Drawing.Point(272, 252);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 24;
@@ -132,28 +115,44 @@ namespace FoodBang.Forms.User
             this.label4.TabIndex = 26;
             this.label4.Text = "Usuario";
             // 
-            // textBox4
+            // txtUser
             // 
-            this.textBox4.Location = new System.Drawing.Point(147, 140);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 20);
-            this.textBox4.TabIndex = 25;
+            this.txtUser.Location = new System.Drawing.Point(147, 140);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(200, 20);
+            this.txtUser.TabIndex = 25;
+            // 
+            // Edad
+            // 
+            this.Edad.AutoSize = true;
+            this.Edad.Location = new System.Drawing.Point(25, 176);
+            this.Edad.Name = "Edad";
+            this.Edad.Size = new System.Drawing.Size(32, 13);
+            this.Edad.TabIndex = 28;
+            this.Edad.Text = "Edad";
+            // 
+            // txtEdad
+            // 
+            this.txtEdad.Location = new System.Drawing.Point(147, 173);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(200, 20);
+            this.txtEdad.TabIndex = 27;
             // 
             // FrmCrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 334);
+            this.ClientSize = new System.Drawing.Size(368, 305);
+            this.Controls.Add(this.Edad);
+            this.Controls.Add(this.txtEdad);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label5);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
@@ -168,15 +167,15 @@ namespace FoodBang.Forms.User
         #endregion
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.Label Edad;
+        private System.Windows.Forms.TextBox txtEdad;
     }
 }

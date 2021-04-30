@@ -29,6 +29,7 @@ namespace FoodBang.Forms.Admin
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultarM));
             this.dgvMenu = new System.Windows.Forms.DataGridView();
             this.cbxRest = new System.Windows.Forms.ComboBox();
             this.btnConsultar = new System.Windows.Forms.Button();
@@ -70,6 +71,7 @@ namespace FoodBang.Forms.Admin
             this.Controls.Add(this.cbxRest);
             this.Controls.Add(this.dgvMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "FrmConsultarM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

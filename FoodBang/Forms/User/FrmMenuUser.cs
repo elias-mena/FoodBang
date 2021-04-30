@@ -40,31 +40,37 @@ namespace FoodBang.Forms.User
         private void btnMac_Click(object sender, EventArgs e)
         {
             rest = 1;
+            label1.Text = "Menú McDonals";
             dgvInfo.DataSource = Engine.ConsultarMenu(rest);
         }
         private void btnPH_Click(object sender, EventArgs e)
         {
             int rest = 2;
+            label1.Text = "Menú Pizza Hut";
             dgvInfo.DataSource = Engine.ConsultarMenu(rest);
         }
         private void btnTB_Click(object sender, EventArgs e)
         {
             int rest = 3;
+            label1.Text = "Menú Taco Bell";
             dgvInfo.DataSource = Engine.ConsultarMenu(rest);
         }
         private void btnOG_Click(object sender, EventArgs e)
         {
             int rest = 4;
+            label1.Text = "Menú Olive Garden";
             dgvInfo.DataSource = Engine.ConsultarMenu(rest);
         }
         private void btnNA_Click(object sender, EventArgs e)
         {
             int rest = 5;
+            label1.Text = "Menú Novillo Alegre";
             dgvInfo.DataSource = Engine.ConsultarMenu(rest);
         }
         private void btnOB_Click(object sender, EventArgs e)
         {
             int rest = 6;
+            label1.Text = "Menú OutBack";
             dgvInfo.DataSource = Engine.ConsultarMenu(rest);
         }
        

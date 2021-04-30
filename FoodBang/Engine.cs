@@ -7,14 +7,18 @@ using System.Data;
 using System.Windows.Forms;
 using Npgsql;
 using FoodBang.Forms;
+using FoodBang.Forms.Admin;
+using FoodBang.Forms.User;
 
 namespace FoodBang
 {
     class Engine
     {
         public static bool entrar = false;
+        public static bool entrarA = false;
+        public static bool entrarU = false;
         public static string tipoUsuario = "";
-        public static int totalPedido;
+        public static int totalPedido = 0;
         public static List<string> infoPedido = new List<string>();
 
         //Retorna la conexión a la base de datos (se debe usar en todas las operaciones)
@@ -41,14 +45,74 @@ namespace FoodBang
 
             if (row[0].ToString() == "1")
             {
+                string tipoU = TipoUs(user);
+                if (tipoU == "A")
+                {
+                    entrarA = true;
+                }
+                if(tipoU == "U")
+                {
+                    entrarU = true;
+                }
                 return true;
             }
             else
             {
                 return false;
+                
             }
         }
+        public static string TipoUs(string user)
+        {
+            NpgsqlConnection conn = Conexion();
+            string query = "SELECT tipo FROM usuario WHERE usuario = '" + user + "';";
+            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
+            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
+            DataTable tabla = new DataTable();
+            datos.Fill(tabla);
+           
+            DataRow row = tabla.Rows[0];
 
+            if (row[0].ToString() == "A")
+            {
+                return "A";
+            }
+            if (row[0].ToString() == "U")
+            {
+                return "U";
+
+            }
+            return "";
+
+        }
+
+        public static void Logout() 
+        {
+             entrar = false;
+         entrarA = false;
+        entrarU = false;
+         tipoUsuario = "";
+         totalPedido = 0;
+
+         infoPedido = new List<string>();
+            FrmLogin f = new FrmLogin();
+            f.ShowDialog();
+            UserMenu();
+        }
+
+        public static void UserMenu()
+        {
+            if (Engine.entrarA)
+            {
+                MenuAdmin f1 = new MenuAdmin();
+                f1.ShowDialog();
+            }
+            if (Engine.entrarU)
+            {
+                FrmMenuUser f1 = new FrmMenuUser();
+                f1.ShowDialog();
+            }
+        }
         //Crear cuenta
         public static void InsertarUser(string nombre, string edad, string user, string passw)
         {
@@ -61,7 +125,7 @@ namespace FoodBang
             NpgsqlCommand cmd = new NpgsqlCommand(query, conx);
             // Se ejecuta el query
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Insertado");
+            MessageBox.Show("Usuario Creado");
             conx.Close();
 
         }
@@ -206,7 +270,7 @@ namespace FoodBang
 
         }
 
-        //Gestionar Menús
+        //Gestionar Menú User
         public static DataTable ConsultarMenu(int rest)
         {
 
