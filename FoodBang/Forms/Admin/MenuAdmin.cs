@@ -81,5 +81,11 @@ namespace FoodBang.Forms.Admin
         {
 
         }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Este menú de Administrador permite gestionar todos los datos que maneja el programa," +
+                " puedes navegar por el menú y escoger la operación que deseas realizar");
+        }
     }
 }

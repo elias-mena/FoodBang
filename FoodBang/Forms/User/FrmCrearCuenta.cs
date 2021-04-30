@@ -35,7 +35,7 @@ namespace FoodBang.Forms.User
             }
             else
             {
-                MessageBox.Show("Datos incompletos")
+                MessageBox.Show("Datos incompletos");
             }
             
         }

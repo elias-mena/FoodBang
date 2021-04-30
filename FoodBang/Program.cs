@@ -24,7 +24,16 @@ namespace FoodBang
             f.ShowDialog();
 
             Engine.UserMenu();
+            while (true)
+            {
+                if(Engine.logO == true)
+                {
+                    FrmLogin f2 = new FrmLogin();
+                    f2.ShowDialog();
 
+                    Engine.UserMenu();
+                }
+            }
             
 
         }

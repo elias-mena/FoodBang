@@ -12,7 +12,7 @@ namespace FoodBang.Forms.User
 {
     public partial class FrmMenuUser : Form
     {
-        public static int rest;
+        public static int rest = 1;
         public static int totalPedido = 0;
         public FrmMenuUser()
         {
@@ -88,8 +88,9 @@ namespace FoodBang.Forms.User
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            int resta = rest;
             int comida = (int)txtId.Value;
-            Engine.InfoComida(rest, comida);
+            Engine.InfoComida(resta, comida);
         }
     }
 }

@@ -17,6 +17,7 @@ namespace FoodBang
         public static bool entrar = false;
         public static bool entrarA = false;
         public static bool entrarU = false;
+        public static bool logO = false;
         public static string tipoUsuario = "";
         public static int totalPedido = 0;
         public static List<string> infoPedido = new List<string>();
@@ -88,27 +89,28 @@ namespace FoodBang
 
         public static void Logout() 
         {
-             entrar = false;
+         entrar = false;
          entrarA = false;
-        entrarU = false;
+         entrarU = false;
          tipoUsuario = "";
          totalPedido = 0;
+            logO = true;
 
-         infoPedido = new List<string>();
-            FrmLogin f = new FrmLogin();
-            f.ShowDialog();
-            UserMenu();
+            infoPedido = new List<string>();
+            
         }
 
         public static void UserMenu()
         {
             if (Engine.entrarA)
             {
+                logO = false;
                 MenuAdmin f1 = new MenuAdmin();
                 f1.ShowDialog();
             }
             if (Engine.entrarU)
             {
+                logO = false;
                 FrmMenuUser f1 = new FrmMenuUser();
                 f1.ShowDialog();
             }
