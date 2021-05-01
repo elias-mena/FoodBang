@@ -376,42 +376,5 @@ namespace FoodBang
             infoPedido.Add(info);
             MessageBox.Show("Comida Agregada!");
         }
-        public static List<string> ComidasMenu()
-        {
-            NpgsqlConnection conn = Conexion();
-            //consultamos las categorías a la base de datos
-            string query = "SELECT comida FROM menu;";
-            NpgsqlCommand conector = new NpgsqlCommand(query, conn);
-            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
-            DataTable tabla = new DataTable();
-            datos.Fill(tabla);
-            List<string> comidas = new List<string>();
-            //Creo un datarow para poder manipular los datos
-            DataRow row;
-            //cuento las filas de la tabla
-            int filas = tabla.Rows.Count;
-            for (int i = 0; i < filas; i++)
-            {
-                //llenamos la lista con los restaurantes
-                row = tabla.Rows[i];
-                comidas.Add(row[0].ToString());
-            }
-
-            return comidas;
-        }
-
-        public static void RegistraPedido(string detalle, int monto)
-        {
-            NpgsqlConnection conx = Conexion();
-            string query = "INSERT INTO pedido (detalle, monto)" +
-                " VALUES ('" + detalle + "', " + monto + ");";
-            // Se abre la conexion
-            conx.Open();
-            // Se insertan los datos mediante el query            
-            NpgsqlCommand cmd = new NpgsqlCommand(query, conx);
-            // Se ejecuta el query
-            cmd.ExecuteNonQuery();
-            conx.Close();
-        }
     }
 }

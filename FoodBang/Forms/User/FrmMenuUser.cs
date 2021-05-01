@@ -105,12 +105,15 @@ namespace FoodBang.Forms.User
             {
                 MessageBox.Show("No existe un producto con ese ID");
             }
+<<<<<<< HEAD
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Engine.Logout();
             this.Close();
+=======
+>>>>>>> 4c77a39c2959e80f724a54f3f3b5b9a704d64eaa
         }
     }
 }

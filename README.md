@@ -12,7 +12,7 @@
 
 ## Descripción
 
-Este es un pequeño proyecto de Windows Forms que trata de replicar la aplicación de Uber Eats.
+Este es un pequeño proyecto de Windows Forms que trata de replicar una aplicación de delivery tipo Uber Eats.
 
 La app permite gestionar los menús y comidas de ciertos restaurantes, está pensada para trabajar sólo con los 6 restaurantes que están por defecto y gestionar sus menús y las comidas de estos.
 
